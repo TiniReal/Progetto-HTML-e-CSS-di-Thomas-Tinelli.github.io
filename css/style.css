@@ -27,6 +27,13 @@ h3 {
 	align-items: center;
 	justify-content: center;
 }
+.container2{
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 
 img {
 	height: 100%;
@@ -606,7 +613,153 @@ p {
 
 /* End Footer */
 
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+
 /* CV HTML */
+/*Header Section 2*/
+#header2 {
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: auto;
+}
+
+#header2 .header2 {
+	min-height: 8vh;
+	background-color: rgba(31, 30, 30, 0.24);
+	transition: 0.3s ease background-color;
+}
+
+#header2 .nav-bar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	height: 100%;
+	max-width: 1300px;
+	padding: 0 10px;
+}
+
+#header2 .nav-list ul {
+	list-style: none;
+	position: absolute;
+	background-color: #024059;
+	width: 100vw;
+	height: 100vh;
+	left: 100%;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+	overflow-x: hidden;
+	transition: 0.5s ease left;
+}
+
+#header2 .nav-list ul.active {
+	left: 0%;
+}
+
+#header2 .nav-list ul a {
+	font-size: 2.5rem;
+	font-weight: 500;
+	letter-spacing: 0.2rem;
+	text-decoration: none;
+	color: #D9CCC1;
+	text-transform: uppercase;
+	padding: 20px;
+	display: block;
+}
+
+#header2 .nav-list ul a::after {
+	content: attr(data-after);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	color: #024059;
+	font-size: 13rem;
+	letter-spacing: 50px;
+	z-index: -1;
+	transition: 0.3s ease letter-spacing;
+}
+
+#header2 .nav-list ul li:hover a::after {
+	transform: translate(-50%, -50%) scale(1);
+	letter-spacing: initial;
+}
+
+#header2 .nav-list ul li:hover a {
+	color: #BF6415;
+}
+
+#header2 .hamburger {
+	height: 60px;
+	width: 60px;
+	display: inline-block;
+	border: 3px solid #D9CCC1;
+	border-radius: 50%;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 100;
+	cursor: pointer;
+	transform: scale(0.8);
+	margin-right: 20px;
+}
+
+#header2 .hamburger:after {
+	position: absolute;
+	content: '';
+	height: 100%;
+	width: 100%;
+	border-radius: 50%;
+	border: 3px solid #D9CCC1;
+	animation: hamburger_puls 1s ease infinite;
+}
+
+#header2 .hamburger .bar {
+	height: 2px;
+	width: 30px;
+	position: relative;
+	background-color: #D9CCC1;
+	z-index: -1;
+}
+
+#header2 .hamburger .bar::after,
+#header2 .hamburger .bar::before {
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	background-color: #D9CCC1;
+	transition: 0.3s ease;
+	transition-property: top, bottom;
+}
+
+#header2 .hamburger .bar::after {
+	top: 8px;
+}
+
+#header2 .hamburger .bar::before {
+	bottom: 8px;
+}
+
+#header2 .hamburger.active .bar::before {
+	bottom: 0;
+}
+
+#header2 .hamburger.active .bar::after {
+	top: 0;
+}
+
+
+/*End Header section 2*/
 /* Education Section */
 #education .education {
 	flex-direction: column;
