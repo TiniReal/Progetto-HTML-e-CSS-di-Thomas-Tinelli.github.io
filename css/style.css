@@ -628,7 +628,7 @@ p {
 
 #header2 .header2 {
 	min-height: 8vh;
-	background-color: rgba(31, 30, 30, 0.70);
+	background-color: rgba(31, 30, 30, 0.85);
 	transition: 0.3s ease background-color;
 }
 
